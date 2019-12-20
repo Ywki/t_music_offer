@@ -1,0 +1,12 @@
+.top__logo
+  .top__logo--box
+    = link_to root_path do
+      T-Music Offer
+.top__set
+  .top__set__list
+    .top__set__list--user
+      = link_to "登録したユーザー名", current_user, class: "user_status"
+    .top__set__list--group
+      = link_to "グループ追加・グループ詳細", root_path, class: "group_show"
+    .top__set__list--find
+      提供企業を探す

@@ -1,0 +1,38 @@
+.user__new
+  .user__new__top
+    = render "/share/top_bar"
+  .user__new__sidelist
+    = render "/share/sidelist"
+
+  .user__new__main
+    = form_with model: @user, class: "user__new__form", local: true do |f|
+      .user__new__main__box
+        .user__new__main__box__image
+          .user__new__main__box__image--inner
+            = f.label :image, for: "upload_image" do
+              %img#preview
+                = f.file_field :image, class: "user__image", id: "upload_image"
+      .user__new__main__list
+        .user__new__main__list__name
+          名前：
+          .user__new__main__list__name--inner
+            = f.text_field :name, class: "user__name", placeholder: "ユーザー名"
+        .user__new__main__list__email
+          メールアドレス：
+          .user__new__main__list__email--inner
+            = f.text_field :email, class: "user__email", placeholder: "メールアドレス"
+        .user__new__main__list__introduce
+          紹介文：
+          .user__new__main__list__introduce--inner
+            = f.text_area :introduce, class: "user__introduce", placeholder: "紹介文"
+        .user__new__main__list__password
+          パスワード：
+          .user__new__main__list__password--inner
+            = f.text_area :password, class: "user__password", placeholder: "7~20文字のパスワード"
+        .user__new__main__list__submit
+          = f.submit "登録", class: "user__submit"
+        .cancel
+          = link_to "キャンセル", root_path, class: "cancel_btn"
+
+.footer
+  = render "/share/footer"

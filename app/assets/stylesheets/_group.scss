@@ -1,0 +1,93 @@
+.group {
+  background-color: #fafafa;
+  &__new {
+    margin: 60px 90px 0;
+    padding-bottom: 40px;
+    &__form {
+      background-color: #fff;
+      display: flex;
+      .group__new__box {
+        margin: 20px;
+        text-align: center;
+        color: #333;
+        &__image {
+          width: 200px;
+          height: 200px;
+          margin: 20px;
+          max-height: 240px;
+          max-width: 240px;
+          background-color: #eee;
+          #preview {
+            width: 200px;
+            height: 200px;
+          }
+          #upload_image {
+            display: none;
+          }
+        }
+      }
+      .group__new__box__under {
+        border-left: dashed 2px #ccc;
+        padding: 30px;
+        &__name {
+          &--inner {
+            margin-left: 20px;
+            .group__name {
+              border: none;
+              background-color: #eee;
+              height: 60px;
+              width: 600px;
+              font-size: 30px;
+              margin-bottom: 25px;
+            }
+          }
+        }
+        &__active--area {
+          margin-bottom: 25px;
+          &--inner {
+            margin-left: 20px;
+            #area_id {
+              height: 60px;
+              width: 600px;
+              font-size: 20px;
+            }
+          }
+        }
+        &__homepage {
+          margin-bottom: 25px;
+          &--inner {
+            margin-left: 20px;
+            .group__homepage {
+              border: none;
+              background-color: #eee;
+              height: 60px;
+              width: 600px;
+              font-size: 30px;
+            }
+          }
+        }
+        &__since {
+          margin-bottom: 25px;
+          &--inner {
+            margin-left: 20px;
+            #year_id {
+              height: 60px;
+              width: 600px;
+              font-size: 20px;
+            }
+          }
+        }
+        &__submit {
+          margin: 40px 100px 30px;
+          .group__submit {
+            border: none;
+            width: 400px;
+            height: 30px;
+            background-color: #333;
+            color: #fafafa;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.user__profile__list__edit__page__box {
+  &--upper {
+    &--name {
+      margin-left: 20px;
+      #name_edit {
+        width: 50%;
+        height: 50px;
+        border: none;
+        background-color: #eee;
+      }
+    }   
+  }
+  &--midle {
+    &--text {
+      #text_edit {
+        margin-left: 20px;
+        width: 80%;
+        height: 180px;
+        border: none;
+        background-color: #eee;
+        -webkit-writing-mode: initial;
+      }
+    }
+  }
+  &--under {
+    margin-left: 20px;
+    &--email {
+      #email_edit {
+        width: 50%;
+        height: 50px;
+        border: none;
+        background-color: #eee;
+      }
+    }
+  }
+  &--submit {
+    text-decoration: none;
+    margin: 30px 0 0 20px;
+    .edited {
+      width: 20%;
+      border: none;
+      background-color: #333;
+      color: #fafafa;
+      font-weight: bold;
+      height: 30px;
+    }
+    .edited:hover {
+      background-color: rgb(87, 86, 86);
+    }
+  }
+}

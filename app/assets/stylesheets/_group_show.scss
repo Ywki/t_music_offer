@@ -1,0 +1,93 @@
+.group__show {
+  background-color: #fafafa;
+  &__add {
+    width: 250px;
+    height: 50px;
+    background-color: rgb(14, 8, 59);
+    margin: 30px 600px;
+    border-radius: 5%;
+    line-height: 50px;
+    .new_group {
+      text-decoration: none;
+      color: #fafafa;
+      font-weight: bold;
+      padding: 0 30px;
+    }
+    .new_group::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: '\f055';
+      margin-left: 10px;
+    }
+  }
+  &__list {
+    margin: 0 90px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    display: flex;
+    &__upper {
+      margin: 20px;
+      text-align: center;
+      color: #333;
+      &__image {
+        &--inner {
+          width: 200px;
+          height: 200px;
+          margin: 20px;
+          max-height: 240px;
+          max-width: 240px;
+          background-color: #eee;
+        }
+      }
+    }
+    &__under {
+      border-left: dashed 2px #ccc;
+      padding: 30px;
+      &__name {
+        &--inner {
+          margin-left: 20px;
+          height: 60px;
+          width: 600px;
+          font-size: 30px;
+          margin-bottom: 25px;
+        }
+      }
+      &__member {
+        margin-bottom: 25px;
+        &--inner {
+          margin-left: 20px;
+          height: 60px;
+          width: 600px;
+          font-size: 20px;
+        }
+      }
+      &__active--area {
+        margin-bottom: 25px;
+        &--inner {
+          margin-left: 20px;
+          height: 60px;
+          width: 600px;
+          font-size: 20px;
+        }
+      }
+      &__homepage {
+        margin-bottom: 25px;
+        &--inner {
+          margin-left: 20px;
+          height: 60px;
+          width: 600px;
+          font-size: 20px;
+        }
+      }
+      &__disc {
+        margin-bottom: 25px;
+        &--inner {
+          margin-left: 20px;
+          height: 60px;
+          width: 600px;
+          font-size: 20p
+        }
+      }
+    }
+  }
+}

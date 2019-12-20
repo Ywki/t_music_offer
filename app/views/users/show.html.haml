@@ -1,0 +1,62 @@
+.user
+  .user__top
+    = render "/share/top_bar"
+  .user__side
+    = render "/share/sidelist"
+    
+  %ul.user__profile
+    .user__profile__box
+      .user__profile__box__image
+        NO IMAGE
+        .user__profile__box__image--icon
+    %li.user__profile__list
+      .user__profile__list__name
+        名前：
+        .user__profile__list__name--inner
+          name
+      .user__profile__list__groups
+        所属グループ：
+        .user__profile__list__groups--inner
+          NO BILONGING GROUP
+      .user__profile__list__text
+        紹介文：
+        .user__profile__list__text--inner
+          NO INTRODUCTION
+      .user__profile__list__email
+        メールアドレス：
+        .user__profile__list__email--inner
+          = current_user.email
+      .user__profile__list__recomend
+        推しアーティスト：
+        .user__profile__list__recomend--inner
+          NO LIST
+      .user__profile__list__edit
+        .user__profile__list__edit--btn
+          = fa_icon "arrow-left", class: "icon" 
+          編集
+
+    //edit機能
+    %li.user__profile__list.show
+      = form_with model: @user, method: :patch, class: "user__profile__list__edit__page", local: true do |f|
+        .user__profile__list__edit__page__box
+          .user__profile__list__edit__page__box--upper
+            名前：
+            .user__profile__list__edit__page__box--upper--name
+              = f.text_field :name, class: "name_edit", id: "name_edit", placeholder: "name"
+          .user__profile__list__edit__page__box--midle
+            紹介文：
+            .user__profile__list__edit__page__box--midle--text
+              = f.text_area :text, class: "text_edit", id: "text_edit", placeholder: "text"
+          .user__profile__list__edit__page__box--under
+            メールアドレス：
+            .user__profile__list__edit__page__box--under--email
+              = f.text_field :email, class: "email_edit", id: "email_edit", placeholder: "email"
+          .user__profile__list__edit__page__box--submit
+            = f.submit "編集", class: "edited"
+      .user__profile__list__edit        
+        .user__profile__list__edit--btn
+          = fa_icon "arrow-right", class: "icon" 
+          中止
+
+.footer
+  = render "/share/footer"

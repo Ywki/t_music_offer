@@ -1,0 +1,40 @@
+.group
+  .group__top
+    = render "/share/top_bar"
+  .group__sidelist
+    = render "/share/sidelist"
+
+  .group__new
+    = form_with model: @group, url: root_path, class: "group__new__form" do |f|
+      .group__new__box
+        クリックでイメージを追加
+        .group__new__box__image
+          = f.label :image, for: "upload_image" do
+            %img#preview
+              = f.file_field :image, class: "group__image", id: "upload_image"
+      .group__new__box__under
+        .group__new__box__under__name
+          グループ名：
+          .group__new__box__under__name--inner
+            = f.text_field :name, class: "group__name"
+        .group__new__box__under__menmber
+          メンバー：
+          .group__newe__box__under__member--inner
+            //js追加予定
+        .group__new__box__under__active--area
+          主な活動地域：
+          .group__new__box__under__active--area--inner
+            = f.collection_select :area_id, Area.all, :id, :name
+        .group__new__box__under__homepage
+          ホームページ
+          .group__new__box__under__homepage--inner
+            = f.text_field :homepage_url, class: "group__homepage"
+        .group__new__box__under__since
+          Since
+          .group__new__box__under__since--inner
+            = f.collection_select :year_id, Year.all, :id, :name
+        .group__new__box__under__submit
+          = f.submit "グループ登録", class: "group__submit"
+
+.footer
+  = render "/share/footer"

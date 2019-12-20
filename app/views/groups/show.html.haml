@@ -1,0 +1,33 @@
+.group__show
+  .group__show__top
+    = render "share/top_bar"
+  .group__show__sidelist
+    = render "share/sidelist"
+
+  .group__show__add
+    = link_to "新規アーティスト作成", new_group_path, class: "new_group"
+  .group__show__list
+    .group__show__list__upper
+      .group__show__list__upper__image
+        グループイメージ
+        .group__show__list__upper__image--inner
+    .group__show__list__under
+      .group__show__list__under__name
+        グループ名：
+        .group__show__list__under__name--inner
+      .group__show__list__under__member
+        メンバー：
+        .group__show__list__under__member--inner
+      .group__show__list__under__active--area
+        主な活動地域：
+        .group__show__list__under__active--area--inner
+      .group__show__list__under__homepage
+        ホームページ：
+        .group__show__list__under__homepage--inner
+      .group__show__list__under__disc
+        今までの楽曲：
+        .group__show__list__under__disc--inner
+
+
+.footer
+  = render "/share/footer"
