@@ -3,6 +3,18 @@
   &__main {
     margin: 60px 90px 0;
     padding-bottom: 40px;
+    &__title {
+      width: 100%;
+      font-weight: bold;
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px 0;
+      background-image: image-url("photo-1494049694820-92a3163b10ad.jpeg");
+      background-position: 100% 70%;
+      color: #eee;
+      text-shadow: 0px 0px 3px #000;
+    }
     &__box {
       background-color: #fff;
       height: 200px;
@@ -45,6 +57,15 @@
           }
         }
       }
+      &__login {
+        background-image: image-url("photo-1526142684086-7ebd69df27a5.jpeg");
+        background-position: 50% 80%;
+        height: 50px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        text-shadow: 2px 2px 3px #fff;
+      }
       &__email {
         &--inner {
           .user__email {
@@ -73,11 +94,10 @@
         &--inner {
           .user__password {
             margin-top: 10px;
-            padding: 30px;
             border: solid 1px #ccc;
             background-color: #fafafa;
-            width: 80%;
-            height: 70px;
+            width: 82%;
+            padding: 20px;
           }
         }
       }
