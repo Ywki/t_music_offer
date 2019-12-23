@@ -7,21 +7,35 @@
   %ul.user__profile
     .user__profile__box
       .user__profile__box__image
-        NO IMAGE
-        .user__profile__box__image--icon
+        - if current_user.image.present?
+          .user__profile__box__image--icon
+            = image_tag "#{current_user.image}"
+        - else
+          NO IMAGE
     %li.user__profile__list
       .user__profile__list__name
         名前：
         .user__profile__list__name--inner
-          name
+          = current_user.nickname
       .user__profile__list__groups
         所属グループ：
         .user__profile__list__groups--inner
-          NO BILONGING GROUP
+          .user__profile__list__groups--inner--part
+            - if current_user.groups.present?
+              - current_user.groups.each do |group|
+                .user__to__group
+                  = link_to root_path do
+                    = group.name
+            - else
+              NO BILONGING GROUP
       .user__profile__list__text
         紹介文：
         .user__profile__list__text--inner
-          NO INTRODUCTION
+          .user__profile__list__text--inner--part
+            - if current_user.present?
+              = current_user.introduce
+            - else
+              NO INTRODUCTION
       .user__profile__list__email
         メールアドレス：
         .user__profile__list__email--inner
@@ -42,7 +56,7 @@
           .user__profile__list__edit__page__box--upper
             名前：
             .user__profile__list__edit__page__box--upper--name
-              = f.text_field :name, class: "name_edit", id: "name_edit", placeholder: "name"
+              = f.text_field :nickname, class: "name_edit", id: "name_edit", placeholder: "name"
           .user__profile__list__edit__page__box--midle
             紹介文：
             .user__profile__list__edit__page__box--midle--text
@@ -57,6 +71,9 @@
         .user__profile__list__edit--btn
           = fa_icon "arrow-right", class: "icon" 
           中止
+
+  .user__logout
+    = link_to "ログアウト", destroy_user_session_path, class: "logout", method: :delete
 
 .footer
   = render "/share/footer"

@@ -18,6 +18,14 @@
         border-radius: 50%;
         background-color: #fafafa;
         margin: 0 auto;
+        &--icon {
+          img {
+            width: 178px;
+            height: 178px;
+            border-radius: 50%;
+            padding: 1px 0;
+          }
+        }
       }
     }
     &__list {
@@ -42,9 +50,11 @@
       }
       &__text {
         &--inner {
-          font-weight: bold;
-          font-size: 25px;
-          margin-left: 20px; 
+          &--part {
+            font-weight: bold;
+            font-size: 25px;
+            margin-left: 20px; 
+          }
         }
       }
       &__email {
@@ -79,6 +89,22 @@
           background-color: #eee;
         }
       }
+    }
+  }
+  .user__logout {
+    height: 50px;
+    margin-left: 110px;
+    .logout {
+      border-radius: 5px;
+      padding: 18px 30px;
+      text-decoration: none;
+      background-color: rgb(247, 75, 75);
+      color: #fafafa;
+      font-weight: bold;
+    }
+    .logout:hover {
+      background-color: rgb(250, 87, 87);
+      padding: 16px 28px;
     }
   }
 }

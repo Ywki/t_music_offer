@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, skip: :new
-  devise_scope :user do
-    get 'new' => 'devise/sessions#new'
-    post 'create' => 'devise/sessions#create'
-  end
+  devise_for :users
 
   root to: "musics#index"
   resources :musics, only: [:new]
