@@ -5,7 +5,7 @@
     = render "/share/sidelist"
 
   .group__new
-    = form_with model: @group, url: root_path, class: "group__new__form" do |f|
+    = form_with model: @group, class: "group__new__form", local: true do |f|
       .group__new__box
         クリックでイメージを追加
         .group__new__box__image
@@ -16,10 +16,11 @@
         .group__new__box__under__name
           グループ名：
           .group__new__box__under__name--inner
-            = f.text_field :name, class: "group__name"
+            = f.text_field :group_name, class: "group__name"
         .group__new__box__under__menmber
           メンバー：
           .group__newe__box__under__member--inner
+            %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
             //js追加予定
         .group__new__box__under__active--area
           主な活動地域：

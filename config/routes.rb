@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :musics, only: [:new]
   resources :users, only: [:new, :create, :show, :update]
   resources :groups, only: [:new, :create, :show]
+    
 end
