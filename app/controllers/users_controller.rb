@@ -1,14 +1,5 @@
 class UsersController < ApplicationController
 
-  # def new
-  #   @user = User.new
-  #   render "/users/new" unless @user.valid?
-  # end
-
-  # def create
-  #   @user = User.create(user_params)
-  # end
-
   def show
     @user = User.find(params[:id])
   end
@@ -21,7 +12,7 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    params.permit(:image, :nickname, :email, :introduce, :password)
+    params.require(:user).permit(:image, :nickname, :email, :introduce, :password)
   end
 
 end

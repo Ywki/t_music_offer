@@ -3,10 +3,11 @@ class CreateGroups < ActiveRecord::Migration[5.2]
     create_table :groups do |t|
       t.string :group_name
       t.integer :genre
-      t.text :homepage
+      t.text :homepage_url
       t.text :image
-      t.string :since
+      t.integer :year_id
       t.string :activity
+      t.integer :area_id
       t.timestamps
     end
   end

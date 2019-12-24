@@ -25,7 +25,9 @@
               - current_user.groups.each do |group|
                 .user__to__group
                   = link_to root_path do
-                    = group.name
+                    = image_tag "#{group.image}" , class: "user__group__image"
+                    .user__group--name
+                      = group.group_name
             - else
               NO BILONGING GROUP
       .user__profile__list__text
@@ -51,7 +53,7 @@
 
     //edit機能
     %li.user__profile__list.show
-      = form_with model: @user, method: :patch, class: "user__profile__list__edit__page", local: true do |f|
+      = form_with model: @user, class: "user__profile__list__edit__page", local: true do |f|
         .user__profile__list__edit__page__box
           .user__profile__list__edit__page__box--upper
             名前：
