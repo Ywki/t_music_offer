@@ -8,7 +8,7 @@
       .top__set__list--user
         = link_to current_user.nickname, current_user, class: "user_status"
       .top__set__list--group
-        = link_to "グループ追加・グループ詳細", new_group_path, class: "group_show"
+        = link_to "新規グループ追加", new_group_path, class: "group_show"
       .top__set__list--find
         提供企業を探す
     - else 

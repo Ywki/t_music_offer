@@ -1,7 +1,18 @@
 .group {
   background-color: #fafafa;
+  &__title {
+    text-align: center;
+    margin: 15px 6%;
+    padding: 15px;
+    background-position: 80% 70%;
+    background-image: image-url("photo-1494049694820-92a3163b10ad.jpeg");
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+  }
   &__new {
-    margin: 60px 90px 0;
+    margin: 20px 90px 0;
     padding-bottom: 40px;
     &__form {
       background-color: #fff;
@@ -46,7 +57,7 @@
           margin-bottom: 25px;
           &--inner {
             margin-left: 20px;
-            #area_id {
+            #group_area_id {
               height: 60px;
               width: 600px;
               font-size: 20px;
@@ -70,7 +81,7 @@
           margin-bottom: 25px;
           &--inner {
             margin-left: 20px;
-            #year_id {
+            #group_year_id {
               height: 60px;
               width: 600px;
               font-size: 20px;

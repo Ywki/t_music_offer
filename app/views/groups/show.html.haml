@@ -5,38 +5,41 @@
     = render "share/sidelist"
 
   .group__show__add
-    = link_to "新規グループ作成", new_group_path, class: "new_group"
+    .group__show__add--new
+      = link_to "新規グループ作成", new_group_path, class: "new_group"
+    .group__show__add--edit
+      = link_to "グループ編集", edit_group_path, class: "edit_group"
   .group__show__title
     所属グループ
   .group__show__list
-    - current_user.groups.each do |group|
-      .group__show__list__box
-        .group__show__list__box__upper
-          .group__show__list__box__upper__image
-            = image_tag "#{group.image}"
-            .group__show__list__box__upper__image--inner
-        .group__show__list__box__under
-          .group__show__list__box__under__name
-            グループ名：
-            .group__show__list__box__under__name--inner
-              = group.group_name
-          .group__show__list__box__under__member
-            メンバー：
-            .group__show__list__box__under__member--inner
-              - group.users.each do |user|
-                = user.nickname
-          .group__show__list__box__under__active--area
-            主な活動地域：
-            .group__show__list__box__under__active--area--inner
-              = group.area.name
-          .group__show__list__box__under__homepage
-            ホームページ：
-            .group__show__list__box__under__homepage--inner
-              = group.homepage_url
-          .group__show__list__box__under__disc
-            今までの楽曲：
-            .group__show__list__box__under__disc--inner
-  //music一覧を表示
-
+    .group__show__list__box
+      .group__show__list__box__upper
+        .group__show__list__box__upper__image
+          = image_tag "#{@group.image}"
+          .group__show__list__box__upper__image--inner
+      .group__show__list__box__under
+        .group__show__list__box__under__name
+          グループ名：
+          .group__show__list__box__under__name--inner
+            = @group.group_name
+        .group__show__list__box__under__member
+          メンバー：
+          .group__show__list__box__under__member--inner
+            - @group.users.each do |user|
+              = user.nickname
+        .group__show__list__box__under__active--area
+          主な活動地域：
+          .group__show__list__box__under__active--area--inner
+            = @group.area.name
+        .group__show__list__box__under__homepage
+          ホームページ：
+          .group__show__list__box__under__homepage--inner
+            = @group.homepage_url
+        .group__show__list__box__under__disc
+          今までの楽曲：
+          .group__show__list__box__under__disc--inner
+    //music一覧を表示
+  .back
+    = link_to "BACK", current_user, class: "back"
 .footer
   = render "/share/footer"

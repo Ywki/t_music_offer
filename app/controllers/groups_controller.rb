@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
 
   def show
-    @groups = Group.find(params[:id])
+    @group = Group.find(params[:id])
   end
 
   def new
@@ -15,9 +15,16 @@ class GroupsController < ApplicationController
   end
 
   def edit
+    @group = Group.find(params[:id]) 
   end
 
   def update
+    @group = Group.find(params[:id])
+    if @group.update(group_params)
+      redirect_to group_path
+    else
+      redirect_to edit_group_path
+    end
   end
   
   private
@@ -25,5 +32,6 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:image, :group_name, :area_id, :homepage_url, :year_id, user_ids: [])
   end
+
 
 end
