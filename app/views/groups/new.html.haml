@@ -4,6 +4,8 @@
   .group__sidelist
     = render "/share/sidelist"
 
+  .group__title
+    グループ新規作成
   .group__new
     = form_with model: @group, class: "group__new__form", local: true do |f|
       .group__new__box

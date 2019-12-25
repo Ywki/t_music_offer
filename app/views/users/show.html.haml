@@ -24,7 +24,7 @@
             - if current_user.groups.present?
               - current_user.groups.each do |group|
                 .user__to__group
-                  = link_to root_path do
+                  = link_to group_path(group.id) do
                     = image_tag "#{group.image}" , class: "user__group__image"
                     .user__group--name
                       = group.group_name
@@ -62,7 +62,7 @@
           .user__profile__list__edit__page__box--midle
             紹介文：
             .user__profile__list__edit__page__box--midle--text
-              = f.text_area :text, class: "text_edit", id: "text_edit", placeholder: "text"
+              = f.text_area :text, class: "text_edit", id: "text_edit", placeholder: "#{current_user.introduce}"
           .user__profile__list__edit__page__box--under
             メールアドレス：
             .user__profile__list__edit__page__box--under--email

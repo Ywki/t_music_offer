@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root to: "musics#index"
   resources :musics, only: [:new]
   resources :users, only: [:new, :create, :show, :update]
-  resources :groups, only: [:new, :create, :show]
-    
+  resources :groups, only: [:new, :create, :show, :edit, :update]
+
 end

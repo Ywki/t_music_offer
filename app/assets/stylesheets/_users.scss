@@ -115,10 +115,10 @@
   }
   .user__logout {
     height: 50px;
-    margin-left: 110px;
+    margin-left: 55px;
     .logout {
       border-radius: 5px;
-      padding: 18px 30px;
+      padding: 13px 22px;
       text-decoration: none;
       background-color: rgb(247, 75, 75);
       color: #fafafa;
@@ -126,7 +126,7 @@
     }
     .logout:hover {
       background-color: rgb(250, 87, 87);
-      padding: 16px 28px;
+      padding: 12px 20px;
     }
   }
 }

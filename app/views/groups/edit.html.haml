@@ -1,12 +1,43 @@
 .group__edit
+  .group__edit--top
+    = render "/share/top_bar"
+  .group__edit--sidelist
+    = render "/share/sidelist"
+
+  .group__edit--title
+    グループ編集
   .group__edit__box
-    .group__edit__box__name
-      グループ名
-    .group__edit__box__menmber
-      メンバー
-    .group__edit__box__image
-      グループイメージ
-    .group__edit__box__active--area
-      主な活動地域
-    .group__edit__box__homepage
-      ホームページ
+    = form_with model: @group, class: "group__edit__box--form", local: true do |f|
+      = f.hidden_field "group[user_ids][]", value: current_user.id
+      .group__edit__box__list
+        .group__edit__box__list__image
+          .group__edit__box__list__image--inner
+            %label
+              %img#preview
+                = f.file_field :image, class: "hidden", style: "display: none;"
+                .arrow-left
+                  = fa_icon "chevron-left", class: "arrow-left__icon"
+                = image_tag "#{@group.image}"
+        .group__edit__box__list__name
+          グループ名:
+          .group__edit__box__list__name--inner
+            = f.text_field :group_name
+        .group__edit__box__list__menmber
+          メンバー:
+        .group__edit__box__list__active--area
+          主な活動地域:
+          .group__edit__box__list__active--area--inner
+            = f.collection_select :area_id, Area.all, :id, :name
+        .group__edit__box__list__homepage
+          ホームページ:
+          .group__edit__box__list__homepage__inner
+            = f.text_field :homepage_url, class: "group__edit__homepage"
+        .group__edit__box__list__since
+          Since
+          .group__edit__box__list__since__inner
+            = f.collection_select :year_id, Year.all, :id, :name
+        .group__edit__box__list__submit
+          = f.submit "グループ編集", class: "group__edit__submit"
+
+  .footer
+    = render "/share/footer"

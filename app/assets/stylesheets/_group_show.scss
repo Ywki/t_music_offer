@@ -2,23 +2,45 @@
   background-color: #fafafa;
   padding-bottom: 10px;
   &__add {
-    width: 220px;
-    height: 50px;
-    background-color: rgb(14, 8, 59);
-    margin: 30px 600px;
-    border-radius: 5%;
-    line-height: 50px;
-    .new_group {
-      text-decoration: none;
-      color: #fafafa;
-      font-weight: bold;
-      padding: 0 30px;
+    display: flex;
+    text-align: center;
+    margin: 30px 30%;
+    &--new {
+      background-color: rgb(14, 8, 59);
+      border-radius: 5%;
+      line-height: 50px;
+      a {
+        width: 220px;
+        height: 50px;
+        text-decoration: none;
+        color: #fafafa;
+        font-weight: bold;
+        padding: 0 30px;
+      }
+      a::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: '\f055';
+        margin-left: 10px;
+      }
     }
-    .new_group::after {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      content: '\f055';
-      margin-left: 10px;
+    &--edit {
+      background-color: rgb(182, 16, 10);
+      border-radius: 5%;
+      line-height: 50px;
+      margin-left: 50px;
+      a {
+        text-decoration: none;
+        color: #fafafa;
+        font-weight: bold;
+        padding: 0 40px;
+      }
+      a::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: '\f304';
+        margin-left: 10px;
+      }
     }
   }
   &__title {
@@ -106,6 +128,22 @@
           }
         }
       }
+    }
+  }
+  .back {
+    margin: 20px 30px;
+    color: #fafafa;
+    a {
+      text-decoration: none;
+      padding: 10px 15px;
+      background-color: rgb(245, 70, 70);
+      border-radius: 5px;
+    }
+    a::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: '\f2ea';
+      margin: 0 5px;
     }
   }
 }
