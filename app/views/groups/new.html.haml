@@ -14,26 +14,48 @@
           = f.label :image, for: "upload_image" do
             %img#preview
               = f.file_field :image, class: "group__image", id: "upload_image"
+
       .group__new__box__under
         .group__new__box__under__name
           グループ名：
           .group__new__box__under__name--inner
             = f.text_field :group_name, class: "group__name"
+
         .group__new__box__under__menmber
-          メンバー：
-          .group__newe__box__under__member--inner
-            %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
-            //js追加予定
+          .addmember__field__on
+            .addmember__field__on--left
+              %label.addmember__label{for: "addmember__plus"} メンバーを追加
+            .addmember__field__on--right
+              .addmember__search
+                %input#user-search-field.addmember__input{placeholder: "メンバー検索", type: "text"}
+              #user-search-result
+          .addmember__field
+            .addmember__field--left
+              %label.addmember__label{for: "addmember__list"} メンバー：
+            .addmember__field--right
+              #addmember__groups.js-add-user
+                .addmember__group.js-group-member
+                  %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
+                  %p.addmember__group--users= current_user.nickname
+              - @group.users.each do |user|
+                - if current_user.nickname != user.nickname
+                  .addmember__group.js-group-member
+                    %input{name: "group[user_ids][]", type: "hidden", value: user.id}
+                    %p.addmember__group--users
+                      = user.nickname
+                    %a.user-search-remove.addmember__btn.addmember__btn--remove.js-remove-btn
+                      削除
+                      
         .group__new__box__under__active--area
           主な活動地域：
           .group__new__box__under__active--area--inner
             = f.collection_select :area_id, Area.all, :id, :name
         .group__new__box__under__homepage
-          ホームページ
+          ホームページ：
           .group__new__box__under__homepage--inner
             = f.text_field :homepage_url, class: "group__homepage"
         .group__new__box__under__since
-          Since
+          Since：
           .group__new__box__under__since--inner
             = f.collection_select :year_id, Year.all, :id, :name
         .group__new__box__under__submit

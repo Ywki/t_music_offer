@@ -102,3 +102,43 @@
     }
   }
 }
+
+#user-search-field {
+  margin: 5px 0 0 20px;
+  padding: 10px 20px;
+  border: solid 2px #ccc;
+}
+
+#user-search-result {
+  .addmember__group {
+    display: flex;
+    margin-left: 20px;
+    padding: 10px 0;
+    p {
+      margin-right: 10px;
+    }
+    .user__search__add {
+      color: rgb(49, 28, 236);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+
+.addmember__field {
+  margin: 10px 0 30px 20px;
+  padding: 5px;
+  background-color: #eee;
+  .addmember__group {
+    display: flex;
+    padding: 5px 10px;
+    p {
+      margin-right: 10px;
+    }
+    .user-search-remove {
+      color: rgb(241, 59, 59);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
