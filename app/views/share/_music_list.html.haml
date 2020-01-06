@@ -10,8 +10,13 @@
           .main__box__contents__right__text--inner
             = music.title
         .main__box__contents__right__music--url
-          音楽のMP3リンク：
+          楽曲を再生する： 
           .main__box__contents__right__music--url--inner
-            = audio_tag "#{music.file}"
+            %audio{preload: "none", src: "#{music.file}"}
+              :javascript
+                audiojs.events.ready(function() {
+                  var as = audiojs.createAll();
+                });
+              
         .main__box__contents__right__more
           = link_to "詳しく見る", group_music_path(music.group_id, music.id)
