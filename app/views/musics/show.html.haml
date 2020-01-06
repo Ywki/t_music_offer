@@ -1,0 +1,29 @@
+.music__show
+  .music__show__top
+    = render "share/top_bar"
+  .music__show__sidelist
+    = render "share/sidelist"
+
+  .music__show__title
+    楽曲詳細
+  .music__show__file
+    .music__show__file__group
+      = @group.group_name
+    .music__show__file__under
+      .music__show__file__under__name
+        = @music.title
+      .music__show__file__under__mp3url
+        = @music.file
+  .music__show__list
+    .music__show__list__image
+      = image_tag "#{@music.image}"
+    .music__show__list__right
+      .music__show__list__right__genre
+      .music__show__list__right__text
+        = @music.text
+
+.back
+  = link_to "BACK", :back
+
+.footer
+  = render "/share/footer"

@@ -67,6 +67,7 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'active_hash'
+gem 'carrierwave-audio'
 
 group :development, :test do
   gem 'capistrano'

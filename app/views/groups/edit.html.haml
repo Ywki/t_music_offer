@@ -54,14 +54,17 @@
             = f.collection_select :area_id, Area.all, :id, :name
         .group__edit__box__list__homepage
           ホームページ:
-          .group__edit__box__list__homepage__inner
+          .group__edit__box__list__homepage--inner
             = f.text_field :homepage_url, class: "group__edit__homepage"
         .group__edit__box__list__since
           Since
-          .group__edit__box__list__since__inner
+          .group__edit__box__list__since--inner
             = f.collection_select :year_id, Year.all, :id, :name
         .group__edit__box__list__submit
           = f.submit "グループ編集", class: "group__edit__submit"
+          
+  .back
+    = link_to "BACK", group_path, class: "back"
 
   .footer
     = render "/share/footer"

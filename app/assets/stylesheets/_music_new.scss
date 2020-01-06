@@ -1,0 +1,92 @@
+.new__music {
+  background-color: #fafafa;
+  padding-bottom: 10px;
+  &__title {
+    text-align: center;
+    margin: 30px 6%;
+    padding: 15px;
+    background-position: 80% 70%;
+    background-image: image-url("photo-1494049694820-92a3163b10ad.jpeg");
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+  }
+  &__format {
+    margin: 20px 90px 0;
+    padding-bottom: 40px;
+    .new__music__format__main {
+      &__image {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        max-height: 240px;
+        max-width: 240px;
+        #preview {
+          width: 200px;
+          height: 200px;
+          background-color: #fff;
+          margin: 10px 10px 10px 30px;
+          cursor: pointer;
+        }
+        #upload_image {
+          display: none;
+        }
+      }
+      &__title {
+        margin: 50px 20px 20px 20px;
+        #_musics_title {
+          border: solid 2px #ccc;
+          background-color: #fff;
+          margin: 10px 10px 10px 30px;
+          height: 45px;
+          width: 500px;
+          font-size: 20px;
+        }
+      }
+      &__genre {
+        margin: 0 20px;
+        #genre {
+          margin: 10px 30px;
+          width: 250px;
+          height: 30px;
+          background-color: #fff;
+        }
+      }
+      &__mp3url {
+        margin: 20px;
+        &--inner {
+          margin: 10px;
+          input {
+            margin: 10px 20px;
+          }
+        }
+      }
+      &__introduce {
+        margin: 0 20px;
+        &--inner {
+          margin: 20px 30px;
+          #_musics_text {
+            height: 200px;
+            width: 100%;
+            border: solid 2px #ccc;
+          }
+        }
+      }
+      &__submit {
+        input {
+          width: 200px;
+          height: 30px;
+          background-color: rgb(11, 4, 114);
+          color: #fafafa;
+          cursor: pointer;
+        }
+        .back {
+          text-decoration: none;
+          padding: 6px 80px;
+          background-color: rgb(248, 99, 99);
+        }
+      }
+    }
+  }
+}

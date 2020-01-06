@@ -60,6 +60,7 @@
             = f.collection_select :year_id, Year.all, :id, :name
         .group__new__box__under__submit
           = f.submit "グループ登録", class: "group__submit"
-
+          .back
+            = link_to "BACK", :back, clss: "back-btn"
 .footer
   = render "/share/footer"

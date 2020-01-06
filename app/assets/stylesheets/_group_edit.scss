@@ -1,16 +1,113 @@
-.group__edit__box__list__image--inner {
-  label {
-    display: flex;
-    img {
-      height: 200px;
-      width: 200px;
-      display: inline-block;
-    }
-    .arrow-left {
-      &__icon {
-        margin: 90px 10px;
-        font-size: 25px;
-        display: inline-block;
+.group__edit {
+  background-color: #fafafa;
+  &--title {
+    text-align: center;
+    margin: 15px 6%;
+    padding: 15px;
+    background-position: 80% 70%;
+    background-image: image-url("photo-1507838153414-b4b713384a76.jpeg");
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+  }
+  &__box {
+    margin: 0 90px;
+    background-color: #fff;
+    &__list {
+      margin: 0 200px;
+      &__image {
+        margin: 0 150px;
+        &--inner {
+          label {
+            display: flex;
+            img {
+              height: 200px;
+              width: 200px;
+              display: inline-block;
+              margin: 0 20px;
+            }
+            .arrow-left {
+              &__icon {
+                margin: 90px 10px;
+                font-size: 25px;
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+      &__name {
+        background-color: #eee;
+        margin: 0 0 30px 20px;
+        padding: 10px;
+        input {
+          border: none;
+          width: 80%;
+          height: 50px;
+          margin-left: 25px;
+          margin: 10px;
+          padding: 10px;
+          font-size: 25px;
+        }
+      }
+      &__active--area {
+        background-color: #eee;
+        margin: 0 0 30px 20px;
+        padding: 10px;
+        &--inner {
+          #group_area_id {
+            border: none;
+            width: 80%;
+            height: 50px;
+            margin-left: 25px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 25px;
+          }
+        }
+      }
+      &__homepage {
+        background-color: #eee;
+        margin: 0 0 30px 20px;
+        padding: 10px;
+        &--inner {
+          input {
+            border: none;
+            width: 80%;
+            height: 50px;
+            margin-left: 25px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 25px;
+          }
+        }
+      }
+      &__since {
+        background-color: #eee;
+        margin: 0 0 30px 20px;
+        padding: 10px;
+        &--inner {
+          #group_year_id {
+            border: none;
+            width: 80%;
+            height: 50px;
+            margin-left: 25px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 25px;
+          }
+        }
+      }
+      &__submit {
+        input {
+          border: none;
+          background-color: rgb(2, 9, 117);
+          width: 80%;
+          height: 40px;
+          margin: 10px 100px;
+          color: #fafafa;
+        }
       }
     }
   }
