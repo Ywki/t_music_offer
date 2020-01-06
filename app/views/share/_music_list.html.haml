@@ -12,6 +12,6 @@
         .main__box__contents__right__music--url
           音楽のMP3リンク：
           .main__box__contents__right__music--url--inner
-            = music.file
+            = audio_tag "#{music.file}"
         .main__box__contents__right__more
-          詳しく見る
+          = link_to "詳しく見る", group_music_path(music.group_id, music.id)

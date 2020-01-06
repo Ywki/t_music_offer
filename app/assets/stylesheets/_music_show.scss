@@ -1,0 +1,61 @@
+.music__show {
+  background-color: #fafafa;
+  padding-bottom: 10px;
+  &__title {
+    text-align: center;
+    margin: 30px 6%;
+    padding: 15px;
+    background-position: 80% 70%;
+    background-image: image-url("photo-1494049694820-92a3163b10ad.jpeg");
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+  }
+  &__file {
+    margin: 30px 6%;
+    &__group {
+      font-size: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+    &__under {
+      border: solid 1px #ccc;
+      padding: 20px;
+      margin: 10px 0;
+      text-align: center;
+      &__name {
+        color: #333;
+        font-size: 25px;
+      }
+      &__mp3url {
+        font-size: 30px;
+        background-color: #eee;
+      }
+    }
+  }
+  &__list {
+    margin: 30px 6%;
+    display: flex;
+    &__image {
+      img {
+        min-width: 400px;
+        max-width: 400px;
+      }
+    }
+    &__right {
+      width: 100%;
+      margin-left: 10px;
+      &__genre {
+        background-color: #333;
+        height: 30px;
+        color: #fafafa;
+        text-align: center;
+      }
+      &__text {
+        margin: 20px;
+        
+      }
+    }
+  }
+}

@@ -14,6 +14,7 @@ class MusicsController < ApplicationController
   end
 
   def show
+    @group = Group.find(params[:group_id])
     @music = @group.musics.find(params[:id])
   end
 

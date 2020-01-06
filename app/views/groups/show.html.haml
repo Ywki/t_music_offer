@@ -38,7 +38,9 @@
         .group__show__list__box__under__disc
           今までの楽曲：
           .group__show__list__box__under__disc--inner
-    //music一覧を表示
+            - @group.musics.reverse.each do |music|
+              .group__musics
+                = link_to music.title, group_music_path(@group.id, music.id)
   .back
     = link_to "BACK", current_user, class: "back"
 .footer
