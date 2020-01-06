@@ -1,15 +1,17 @@
-.main__box
-  .main__box__left
-    .main__box__left__image
-      No Image
-  .main__box__right
-    .main__box__right__text
-      音楽の紹介文概要：
-      .main__box__right__text--inner
-        test
-    .main__box__right__music--url
-      音楽のMP3リンク：
-      .main__box__right__music--url--inner
-        test
-    .main__box__right__more
-      詳しく見る
+- @musics.each do |music|
+  .main__box
+    .main__box__contents
+      .main__box__contents__left
+        .main__box__contents__left__image
+          = image_tag "#{music.image}"
+      .main__box__contents__right
+        .main__box__contents__right__text
+          音楽の紹介文概要：
+          .main__box__contents__right__text--inner
+            = music.title
+        .main__box__contents__right__music--url
+          音楽のMP3リンク：
+          .main__box__contents__right__music--url--inner
+            = music.file
+        .main__box__contents__right__more
+          詳しく見る

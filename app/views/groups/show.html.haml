@@ -4,11 +4,6 @@
   .group__show__sidelist
     = render "share/sidelist"
 
-  .group__show__add
-    .group__show__add--new
-      = link_to "新規グループ作成", new_group_path, class: "new_group"
-    .group__show__add--edit
-      = link_to "グループ編集", edit_group_path, class: "edit_group"
   .group__show__title
     所属グループ
   .group__show__list
@@ -16,7 +11,12 @@
       .group__show__list__box__upper
         .group__show__list__box__upper__image
           = image_tag "#{@group.image}"
-          .group__show__list__box__upper__image--inner
+        .group__show__list__box__upper--inner
+          メニュー
+          .group__show__list__box__upper--inner__music
+            = link_to "楽曲登録", new_group_music_path(@group.id), class: "new_music"
+          .group__show__list__box__upper--inner__edit
+            = link_to "グループ編集", edit_group_path, class: "edit_group"
       .group__show__list__box__under
         .group__show__list__box__under__name
           グループ名：
