@@ -70,6 +70,7 @@ gem 'mini_magick'
 gem 'active_hash'
 gem 'carrierwave-audio'
 gem 'audiojs-rails'
+gem 'fog-aws'
 
 group :development, :test do
   gem 'capistrano'
