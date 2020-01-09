@@ -2,7 +2,7 @@
 lock "~> 3.11.2"
 
 set :application, "t_music_offer"
-set :repo_url, "git@example.com:ywki/t_music_offer.git"
+set :repo_url, "git@example.com:Ywki/t_music_offer.git"
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 set :rbenv_type, :user
