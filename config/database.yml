@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: t_music_offer_production
-   username: root
+  username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
